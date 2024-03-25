@@ -1,0 +1,3 @@
+/.docker/rabbitmq/*
+
+!/.docker/rabbitmq/Dockerfile
