@@ -1,3 +1,5 @@
-/.docker/rabbitmq/*
+/.docker/rabbitmq/data
+/.docker/rabbitmq/logs
+/.env
 
-!/.docker/rabbitmq/Dockerfile
+

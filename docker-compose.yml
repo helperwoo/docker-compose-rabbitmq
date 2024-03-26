@@ -13,6 +13,6 @@ services:
       - 5672:5672
       - 15672:15672
     environment:
-      RABBITMQ_ERLANG_COOKIE: "RabbitMQ-name"
+      RABBITMQ_ERLANG_COOKIE: "RabbitMQ-${APP}"
       RABBITMQ_DEFAULT_USER: ${DEFAULT_USER}
       RABBITMQ_DEFAULT_PASS: ${DEFAULT_PASS}
