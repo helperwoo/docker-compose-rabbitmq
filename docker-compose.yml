@@ -10,9 +10,9 @@ services:
       - ./.docker/rabbitmq/data/:/var/lib/rabbitmq/
       - ./.docker/rabbitmq/logs/:/var/log/rabbitmq/
     ports:
-      - 5672:5672 # default
-      - 15672:15672 # management
-      - 15674:15674 # web STOMP
+      - ${AMQP_PORT}:5672 # default
+      - ${MANAGEMENT_PORT}:15672 # management
+      - ${STOMP_PORT}:15674 # web STOMP
     environment:
       RABBITMQ_ERLANG_COOKIE: "RabbitMQ-${APP}"
       RABBITMQ_DEFAULT_USER: ${DEFAULT_USER}
