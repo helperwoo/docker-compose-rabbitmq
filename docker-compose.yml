@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   rabbitmq:
     build:
@@ -13,7 +11,3 @@ services:
       - ${AMQP_PORT}:5672 # default
       - ${MANAGEMENT_PORT}:15672 # management
       - ${STOMP_PORT}:15674 # web STOMP
-    environment:
-      RABBITMQ_ERLANG_COOKIE: "RabbitMQ-${APP}"
-      RABBITMQ_DEFAULT_USER: ${DEFAULT_USER}
-      RABBITMQ_DEFAULT_PASS: ${DEFAULT_PASS}
