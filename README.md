@@ -71,8 +71,8 @@ RabbitMQ built-in 기능인 DNS Peer Discovery 방식으로 구현합니다.
 **1. `rabbitmq.conf` 내 cluster formation을 설정합니다.**
 - `cluster_formation.peer_discovery_backend = rabbit_peer_discovery_dns`
   - discovery 방식을 설정합니다.
-- `cluster_formation.dns.hostname = {seed hostname}`
-  - seed hostname을 작성합니다.
+- `cluster_formation.dns.hostname = {hostname}`
+  - DNS hostname을 작성합니다.
 
 **2. Docker 컨테이너 bash 접속**
 - `docker exec -it {container} bash`  
