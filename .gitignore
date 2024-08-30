@@ -2,9 +2,9 @@
 !/.docker/rabbitmq/data/.erlang.cookie
 
 /.docker/rabbitmq/logs/*
+!/.docker/rabbitmq/logs/.log
 
-/.docker/rabbitmq/etc/enabled_plugins
-/.docker/rabbitmq/etc/rabbitmq.conf
-/.docker/rabbitmq/etc/rabbitmq-env.conf
+/.docker/rabbitmq/etc/*
+!/.docker/rabbitmq/etc/enabled_plugins
 
 /.env
