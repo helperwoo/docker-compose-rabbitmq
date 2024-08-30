@@ -7,7 +7,8 @@
 ---
 
 ### Configure
-RabbitMQ 설정파일 입니다.
+RabbitMQ 기본 설정파일 입니다.
+`rabbitmq.conf.example` 샘플 설정파일을 참고하여 작성합니다.
 
 path - `.docker/rabbitmq/etc/rabbitmq.conf`
 
