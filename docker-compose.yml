@@ -13,4 +13,8 @@ services:
       - ${MANAGEMENT_PORT}:15672 # management
       - ${STOMP_PORT}:15674 # web STOMP
       - ${ED_PORT}:25672 # Erlang Distribution
+    environment:
+      - RABBITMQ_NODENAME=${RABBITMQ_NODENAME}
+      - RABBITMQ_USE_LONGNAME=${RABBITMQ_USE_LONGNAME}
+      - RABBITMQ_ERLANG_COOKIE=${RABBITMQ_ERLANG_COOKIE}
       

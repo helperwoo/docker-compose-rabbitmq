@@ -6,5 +6,6 @@
 
 /.docker/rabbitmq/etc/*
 !/.docker/rabbitmq/etc/enabled_plugins
+!/.docker/rabbitmq/etc/rabbitmq.conf.example
 
 /.env

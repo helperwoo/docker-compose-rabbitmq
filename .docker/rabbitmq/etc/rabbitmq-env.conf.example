@@ -1,8 +1,0 @@
-# Example rabbitmq-env.conf file entries. Note that the variables
-# do not have the RABBITMQ_ prefix.
-#
-# Overrides node name
-NODENAME=rabbit@hostname
-USE_LONGNAME=true
-
-ERLANG_COOKIE=rabbitmq
