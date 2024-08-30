@@ -2,12 +2,15 @@ services:
   rabbitmq:
     build:
       context: .docker/rabbitmq
-    container_name: rabbitmq
+    container_name: ${CONTAINER_NAME}
     volumes:
       - ./.docker/rabbitmq/etc/:/etc/rabbitmq/
       - ./.docker/rabbitmq/data/:/var/lib/rabbitmq/
       - ./.docker/rabbitmq/logs/:/var/log/rabbitmq/
     ports:
+      - ${EPMD_PORT}:4369 # EPMD
       - ${AMQP_PORT}:5672 # default
       - ${MANAGEMENT_PORT}:15672 # management
       - ${STOMP_PORT}:15674 # web STOMP
+      - ${ED_PORT}:25672 # Erlang Distribution
+      

@@ -303,8 +303,8 @@
 ## Relevant doc guide: https://www.rabbitmq.com/docs/access-control
 ##
 # default_vhost = /
-default_user = admin
-default_pass = admin1
+# default_user = guest
+# default_pass = guest
 
 # default_permissions.configure = .*
 # default_permissions.read = .*
