@@ -68,20 +68,24 @@ path - `.env`
 ### Cluster Peering
 RabbitMQ built-in 기능인 DNS Peer Discovery 방식으로 구현합니다.
 
-##### 1. `rabbitmq.conf` 내 cluster formation을 설정합니다.
+**1. `rabbitmq.conf` 내 cluster formation을 설정합니다.**
 - `cluster_formation.peer_discovery_backend = rabbit_peer_discovery_dns`
   - discovery 방식을 설정합니다.
 - `cluster_formation.dns.hostname = {seed hostname}`
   - seed hostname을 작성합니다.
 
-##### 2. Docker 컨테이너 bash 접속
-- `docker exec -it {container} bash`
+**2. Docker 컨테이너 bash 접속**
+- `docker exec -it {container} bash`  
 
-##### 3. seed node로 cluster join
-- `rabbitmqctl join_cluster {node}`
-
-##### * 클러스터에서 제외
-- `rabbitmqctl stop_app`
-- `rabbitmqctl reset`
-- `rabbitmqctl start_app`
+**3. seed node로 cluster join**
+- `rabbitmqctl join_cluster {node}`  
+- *<u>클러스터에서 제외하기</u>*
+  - 현재 node를 제외할 경우
+    - *(실행 중인 경우)* `rabbitmqctl stop_app`
+    - `rabbitmqctl reset`
+    - `rabbitmqctl start_app`
+  - 다른 node를 제외할 경우
+    - *(실행 중인 경우)* `rabbitmqctl -n {other_node} stop_app`
+    - `rabbitmqctl forget_cluster_node {other_node}`
+  
 
